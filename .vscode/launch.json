@@ -19,6 +19,24 @@
         "--allow-all"
       ],
       "attachSimplePort": 9229
+    },
+    {
+      "name": "citations-supabase-deno",
+      "request": "launch",
+      "type": "node",
+      "program": "server.tsx",
+      "cwd": "/home/d9k/cr/demo/citations-supabase-demo",
+      "runtimeExecutable": "${env:HOME}/.deno/bin/deno",
+      "runtimeArgs": [
+        "run",
+        "--no-npm",
+        "--inspect",
+        "--allow-all",
+        "--no-check",
+        // "--watch"
+      ],
+      "args": [],
+      "attachSimplePort": 9229
     }
   ]
 }
