@@ -64,6 +64,14 @@ export const serveStatic = (options: ServeStaticOptions = { root: "" }) => {
        * TODO: Maybe we should handle the type of error that fetch would throw?
        */
       log.debug(`Static file: ${path} does not exist, continuing`);
+
+      if (path.match("\.map$")) {
+        return new Response(
+          null,
+          { status: 404 },
+        );
+      }
+
       await next();
     }
   };
